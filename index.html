@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codify: Live Code Editor</title>
 
-    <!-- Tailwind -->
+    <!-- Tailwind CSS -->
     <link href="./src/output.css" rel="stylesheet" />
+
+    <!-- Main script -->
+    <script src="/src/main.ts"></script>
   </head>
 
   <body>
     <main class="flex h-screen flex-col md:flex-row">
-      <!--  Left panel: Code -->
+      <!--  Left panel: Code editor -->
       <section
         class="flex flex-col w-full md:w-1/2 border-r border-zinc-300 resize-x overflow-hidden"
       >
@@ -55,7 +58,5 @@
         ></iframe>
       </section>
     </main>
-
-    <script src="/src/main.ts"></script>
   </body>
 </html>
