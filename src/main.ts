@@ -1,8 +1,8 @@
 function main() {
-  let htmlCode = document.getElementById("html-code") as HTMLTextAreaElement;
-  let cssCode = document.getElementById("css-code") as HTMLTextAreaElement;
-  let jsCode = document.getElementById("js-code") as HTMLTextAreaElement;
-  let preview = document.getElementById("preview") as HTMLIFrameElement;
+  const htmlCode = document.getElementById("html-code") as HTMLTextAreaElement;
+  const cssCode = document.getElementById("css-code") as HTMLTextAreaElement;
+  const jsCode = document.getElementById("js-code") as HTMLTextAreaElement;
+  const preview = document.getElementById("preview") as HTMLIFrameElement;
 
   preview!.contentDocument!.body.innerHTML = `${htmlCode.value} <style>${cssCode.value}</style>`;
 
