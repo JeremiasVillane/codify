@@ -66,4 +66,4 @@ This project is licensed under the MIT License.
 
 ## Author 📌
 
-By: Jeremias Villane
+By: [Jeremias Villane](https://www.linkedin.com/in/jeremias-villane)
