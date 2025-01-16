@@ -3,7 +3,10 @@ import { Language } from "../types";
 export const LANGUAGES = ["HTML", "CSS", "JavaScript"] as const;
 
 export const INIT_VALUES: Record<Language, string> = {
-  HTML: `<div class="main">\n  <h2>Codify: Live Code Editor</h2>\n  <button id="clickme">Click me: 0</button>\n</div>`,
+  HTML: `<div class="main">
+  <h2>Codify: Live Code Editor</h2>
+  <button id="clickme">Click me: 0</button>
+</div>`,
   CSS: `body {
   font-family: "Lato", sans-serif;
   font-size: 20pt;

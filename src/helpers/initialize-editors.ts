@@ -10,8 +10,10 @@ export function initializeEditors(languages: Language[], document: Document) {
       `${language.toLocaleLowerCase()}Editor`
     )!;
 
+    const initialValue = localStorage.getItem(language.toLocaleLowerCase()) || INIT_VALUES[language as Language];
+
     editors[language] = monaco.editor.create(container, {
-      value: INIT_VALUES[language as Language],
+      value: initialValue,
       language: language.toLocaleLowerCase(),
       theme: "vs-dark",
       minimap: { enabled: false },

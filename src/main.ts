@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //********* Update preview on editor change *********//
   Object.values(editors).forEach((editor) => {
     editor.onDidChangeModelContent(() => {
+      const language = editor!.getModel()!.getLanguageId();
+      localStorage.setItem(language, editor.getValue());
       setTimeout(() => updatePreview(editors), 250);
     });
   });
