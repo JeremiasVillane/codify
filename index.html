@@ -19,38 +19,48 @@
       <section
         class="flex flex-col w-full md:w-1/2 border-r border-zinc-300 resize-x overflow-hidden"
       >
-        <article class="flex flex-col flex-1">
-          <label for="html-code" class="bg-zinc-900 text-white p-2 flex gap-2"
+        <article class="group flex flex-col flex-1">
+          <label
+            for="html-code"
+            title="HTML code editor"
+            class="select-none bg-zinc-900 text-gray-300 font-medium cursor-pointer hover:bg-zinc-950 p-2 flex gap-2 group-focus-within:bg-zinc-950"
             ><span class="ph--file-html" style="color: orangered"></span
             >HTML</label
           >
           <textarea
             id="html-code"
             onkeyup="main()"
-            class="flex-1 bg-zinc-800 text-white p-2 resize-none"
+            class="flex-1 bg-zinc-800 text-white p-2 resize-none focus-visible:outline-0 ring-0"
           ></textarea>
         </article>
 
-        <article class="flex flex-col flex-1">
-          <label for="css-code" class="bg-zinc-900 text-white p-2 flex gap-2"
+        <article class="group flex flex-col flex-1">
+          <label
+            for="css-code"
+            title="CSS code editor"
+            class="select-none bg-zinc-900 text-gray-300 font-medium cursor-pointer hover:bg-zinc-950 p-2 flex gap-2 group-focus-within:bg-zinc-950"
             ><span class="ph--file-css" style="color: aqua"></span>CSS</label
           >
           <textarea
             id="css-code"
             onkeyup="main()"
-            class="flex-1 bg-zinc-800 text-white p-2 resize-none"
+            class="flex-1 bg-zinc-800 text-white p-2 resize-none focus-visible:outline-0 ring-0"
           ></textarea>
         </article>
 
-        <article class="flex flex-col flex-1">
-          <label for="js-code" class="bg-zinc-900 text-white p-2 flex gap-2"
-            ><span class="ph--file-js" style="color: yellow"></span
-            >JavaScript</label
+        <article class="group flex flex-col flex-1">
+          <label
+            for="js-code"
+            title="JavaScript code editor"
+            class="select-none bg-zinc-900 text-gray-300 font-medium cursor-pointer hover:bg-zinc-950 p-2 flex gap-2 group-focus-within:bg-zinc-950"
           >
+            <span class="ph--file-js" style="color: yellow"></span>
+            JavaScript
+          </label>
           <textarea
             id="js-code"
             onkeyup="main()"
-            class="flex-1 bg-zinc-800 text-white p-2 resize-none"
+            class="flex-1 bg-zinc-800 text-white p-2 resize-none focus-visible:outline-0 ring-0"
           ></textarea>
         </article>
       </section>
