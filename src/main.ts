@@ -1,6 +1,7 @@
 import { LANGUAGES } from "./constants";
 import {
   createEditorSection,
+  handleExport,
   // handleResize,
   initializeEditors,
   updatePreview,
@@ -25,6 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //*************** Initialize preview ***************//
   updatePreview(editors);
+
+  //*************** Handle export button ***************//
+  const exportButton = document.getElementById("exportButton");
+  exportButton?.addEventListener("click", () => handleExport(editors));
 
   //*************** Handling resizing ***************//
   // handleResize(document);

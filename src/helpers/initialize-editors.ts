@@ -3,7 +3,7 @@ import { INIT_VALUES } from "../constants";
 import { Language } from "../types";
 
 export function initializeEditors(languages: Language[], document: Document) {
-  const editors = {} as Record<string, monaco.editor.IStandaloneCodeEditor>;
+  const editors = {} as Record<Language, monaco.editor.IStandaloneCodeEditor>;
 
   languages.forEach((language) => {
     const container = document.getElementById(

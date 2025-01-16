@@ -14,6 +14,19 @@
   </head>
 
   <body>
+    <header
+      class="bg-zinc-800 text-white p-4 flex items-center justify-between"
+    >
+      <h1 class="text-2xl font-bold">Codify: Live Code Editor</h1>
+      <button
+        id="exportButton"
+        class="bg-zinc-500 hover:bg-zinc-400 hover:text-black active:scale-95 text-black/80 font-semibold px-3 py-1 rounded-md flex items-center gap-1.5"
+      >
+        <span class="tabler--file-export"></span>
+        Export
+      </button>
+    </header>
+
     <main class="flex h-screen flex-col md:flex-row overflow-hidden">
       <!--  Left panel: Code editor -->
       <section
@@ -29,7 +42,7 @@
 
       <!-- Right panel: Preview -->
       <section class="w-full h-1/2 md:h-full md:w-1/2 p-4">
-        <iframe id="preview" class="w-full h-full border bg-transparent"></iframe>
+        <iframe id="preview" class="w-full h-full border"></iframe>
       </section>
     </main>
   </body>
