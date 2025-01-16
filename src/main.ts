@@ -1,6 +1,7 @@
 import { LANGUAGES } from "./constants";
 import {
   createEditorSection,
+  handleContextMenu,
   handleExport,
   // handleResize,
   initializeEditors,
@@ -9,14 +10,14 @@ import {
 import "./userWorker";
 
 document.addEventListener("DOMContentLoaded", () => {
-  //************** Create editor sections **************//
+  //*************** Create editor sections ***************//
   const container = document.querySelector(".editor-container") as HTMLElement;
   container.innerHTML = LANGUAGES.map(createEditorSection).join("");
 
-  //**************** Initialize editors ****************//
+  //***************** Initialize editors ****************//
   const editors = initializeEditors([...LANGUAGES], document);
 
-  //********* Update preview on editor change *********//
+  //********** Update preview on editor change **********//
   Object.values(editors).forEach((editor) => {
     editor.onDidChangeModelContent(() => {
       const language = editor!.getModel()!.getLanguageId();
@@ -25,13 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  //*************** Initialize preview ***************//
+  //**************** Initialize preview ****************//
   updatePreview(editors);
 
   //*************** Handle export button ***************//
   const exportButton = document.getElementById("exportButton");
   exportButton?.addEventListener("click", () => handleExport(editors));
 
-  //*************** Handling resizing ***************//
+  //************** Handling context menu **************//
+  handleContextMenu(document, editors);
+
+  //**************** Handling resizing ****************//
   // handleResize(document);
 });

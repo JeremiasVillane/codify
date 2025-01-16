@@ -52,3 +52,9 @@ export const ICONS: Record<Language, string> = {
   CSS: "<span class='ph--file-css' style='color: aqua'></span>",
   JavaScript: "<span class='ph--file-js' style='color: yellow'></span>",
 };
+
+export const FILE_EXTENSIONS: Record<Language, string> = {
+  HTML: "html",
+  CSS: "css",
+  JavaScript: "js",
+};
