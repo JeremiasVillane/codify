@@ -21,6 +21,7 @@ export function initializeEditors(languages: Language[], document: Document) {
       language: language.toLocaleLowerCase(),
       theme: "vs-dark",
       minimap: { enabled: false },
+      wordWrap: "on",
     });
 
     // Update label background on focus

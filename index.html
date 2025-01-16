@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codify: Live Code Editor</title>
 
@@ -17,17 +20,26 @@
     <header
       class="bg-zinc-800 text-white p-4 flex items-center justify-between"
     >
-      <h1 class="text-2xl font-bold">Codify: Live Code Editor</h1>
+      <h1 class="text-2xl font-bold flex items-center gap-2 select-none">
+        <img
+          src="https://i.imgur.com/Ga7kKRX.png"
+          width="36px"
+          draggable="false"
+        />Codify: Live Code Editor
+      </h1>
       <button
         id="exportButton"
-        class="bg-zinc-500 hover:bg-zinc-400 hover:text-black active:scale-95 text-black/80 font-semibold px-3 py-1 rounded-md flex items-center gap-1.5"
+        class="bg-zinc-500 hover:bg-zinc-400 hover:text-black active:scale-95 text-black/80 font-semibold px-3 py-1 rounded-md flex items-center gap-1.5 select-none"
       >
         <span class="tabler--file-export"></span>
         Export
       </button>
     </header>
 
-    <main class="flex h-screen flex-col md:flex-row overflow-hidden">
+    <main
+      class="flex flex-col md:flex-row overflow-hidden"
+      style="height: calc(100vh - 4rem)"
+    >
       <!--  Left panel: Code editor -->
       <section
         id="code-editor"

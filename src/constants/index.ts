@@ -4,8 +4,9 @@ export const LANGUAGES = ["HTML", "CSS", "JavaScript"] as const;
 
 export const INIT_VALUES: Record<Language, string> = {
   HTML: `<div class="main">
-  <h2>Codify: Live Code Editor</h2>
+  <img src="https://i.imgur.com/sqM42EY.png" draggable="false" />
   <button id="clickme">Click me: 0</button>
+  <a href="https://github.com/JeremiasVillane/codify" target="_blank" rel="noreferrer noopener" class="author">By: Jeremias Villane</a>
 </div>`,
   CSS: `body {
   font-family: "Lato", sans-serif;
@@ -14,8 +15,17 @@ export const INIT_VALUES: Record<Language, string> = {
 }
   
 .main {
+  display: grid;
+  justify-content: center;
   margin: 100px auto;
   text-align: center;
+  gap: 2rem;
+}
+
+.author {
+  font-size: 1rem;
+  font-style: italic;
+  color: gray;
 }
 
 button {
@@ -26,6 +36,8 @@ button {
   border: 0;
   color: white;
   cursor: pointer;
+  width: 12rem;
+  margin: auto;
 }`,
   JavaScript: `const button = document.getElementById("clickme");
 count = 0;
