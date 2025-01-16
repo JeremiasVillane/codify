@@ -6,6 +6,7 @@ import {
   initializeEditors,
   updatePreview,
 } from "./helpers";
+import "./userWorker";
 
 document.addEventListener("DOMContentLoaded", () => {
   //************** Create editor sections **************//
