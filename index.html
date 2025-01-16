@@ -14,9 +14,10 @@
   </head>
 
   <body>
-    <main class="flex h-screen flex-col md:flex-row">
+    <main class="flex h-screen flex-col md:flex-row overflow-hidden">
       <!--  Left panel: Code editor -->
       <section
+        id="code-editor"
         class="flex flex-col w-full md:w-1/2 border-r border-zinc-300 resize-x overflow-hidden"
       >
         <article class="group flex flex-col flex-1">
@@ -65,8 +66,13 @@
         </article>
       </section>
 
+      <div
+        id="resizeHandle"
+        class="w-2.5 bg-[#ddd] cursor-col-resize transition-[background-color] duration-[0.3s] ease-[ease] shrink-0 relative z-10 hover:bg-[#bbb] active:bg-[#bbb]"
+      ></div>
+
       <!-- Right panel: Preview -->
-      <section class="w-full h-1/2 md:h-full md:w-1/2 p-4">
+      <section id="preview" class="w-full h-1/2 md:h-full md:w-1/2 p-4">
         <iframe
           id="preview"
           class="w-full h-full border"
