@@ -6,6 +6,7 @@ export function createEditorSection(language: Language) {
   <article class="flex flex-col relative">
     <label 
       id="${language.toLowerCase()}Label"
+      data-language="${language}"
       title="${language} code editor"
       class="select-none bg-zinc-900 text-gray-300 font-medium cursor-pointer hover:bg-zinc-950 p-2 flex gap-2 justify-between items-center"
     >

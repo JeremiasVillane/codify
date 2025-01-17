@@ -1,6 +1,6 @@
 import * as monaco from "monaco-editor";
-import { Language } from "../types";
 import { FILE_EXTENSIONS } from "../constants";
+import { Language } from "../types";
 
 export function handleContextMenu(
   editors: Record<Language, monaco.editor.IStandaloneCodeEditor>
@@ -20,16 +20,16 @@ export function handleContextMenu(
       const action = (e.target as HTMLElement).dataset.action;
       const language = (e.target as HTMLElement)
         .closest("article")!
-        .querySelector("label")!
-        .title.replace(" code editor", "");
+        .querySelector("label")!.dataset.language as Language;
+
       if (action === "export") {
-        const editor = editors[language as keyof typeof editors];
+        const editor = editors[language];
         const content = editor.getValue();
         const blob = new Blob([content], { type: "text/plain" });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
         link.download = `codify-${language.toLowerCase()}.${
-          FILE_EXTENSIONS[language as Language]
+          FILE_EXTENSIONS[language]
         }`;
         document.body.appendChild(link);
         link.click();
