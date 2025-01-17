@@ -18,7 +18,7 @@ export function initializeEditors(languages: Language[]) {
 
     const initialValue =
       localStorage.getItem(language.toLocaleLowerCase()) ||
-      INIT_VALUES[language as Language];
+      INIT_VALUES[language];
 
     // Create editor
     editors[language] = monaco.editor.create(container, {

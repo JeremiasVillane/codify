@@ -7,7 +7,21 @@ export async function handleExport(
   const JSZip = (await import("jszip")).default;
   const zip = new JSZip();
 
-  zip.file("index.html", editors.HTML.getValue());
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codify</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+${editors.HTML.getValue()}
+  <script src="script.js"></script>
+</body>
+</html>`;
+
+  zip.file("index.html", html);
   zip.file("styles.css", editors.CSS.getValue());
   zip.file("script.js", editors.JavaScript.getValue());
 
