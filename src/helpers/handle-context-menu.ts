@@ -3,7 +3,6 @@ import { Language } from "../types";
 import { FILE_EXTENSIONS } from "../constants";
 
 export function handleContextMenu(
-  document: Document,
   editors: Record<Language, monaco.editor.IStandaloneCodeEditor>
 ) {
   // Open context menu on click

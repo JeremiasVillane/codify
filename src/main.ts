@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   container.innerHTML = LANGUAGES.map(createEditorSection).join("");
 
   //***************** Initialize editors ****************//
-  const editors = initializeEditors([...LANGUAGES], document);
+  const editors = initializeEditors([...LANGUAGES]);
 
   //********** Update preview on editor change **********//
   Object.values(editors).forEach((editor) => {
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   exportButton?.addEventListener("click", () => handleExport(editors));
 
   //************** Handling context menu **************//
-  handleContextMenu(document, editors);
+  handleContextMenu(editors);
 
   //**************** Handling resizing ****************//
-  handleResize(document);
+  handleResize();
 });

@@ -1,4 +1,4 @@
-export function handleResize(document: Document) {
+export function handleResize() {
   const resizeHandle = document.getElementById("resizeHandle");
   const editorColumn = document.getElementById("code-editor");
   const previewColumn = document.getElementById("preview");
