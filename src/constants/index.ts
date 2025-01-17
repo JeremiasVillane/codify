@@ -38,6 +38,12 @@ button {
   cursor: pointer;
   width: 12rem;
   margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 300px;
+  }
 }`,
   JavaScript: `const button = document.getElementById("clickme");
 count = 0;
