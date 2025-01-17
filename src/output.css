@@ -683,6 +683,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .right-0 {
   right: 0px;
 }

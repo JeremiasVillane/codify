@@ -3,7 +3,7 @@ import { Language } from "../types";
 
 export function createEditorSection(language: Language) {
   return `
-  <article class="flex flex-col flex-1 relative">
+  <article class="flex flex-col relative">
     <label 
       id="${language.toLowerCase()}Label"
       title="${language} code editor"
