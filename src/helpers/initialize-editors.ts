@@ -27,6 +27,7 @@ export function initializeEditors(languages: Language[], document: Document) {
       theme: "vs-dark",
       minimap: { enabled: false },
       wordWrap: "on",
+      automaticLayout: true,
     });
 
     // Update label background on focus
@@ -48,7 +49,7 @@ export function initializeEditors(languages: Language[], document: Document) {
     label?.addEventListener("dblclick", () => {
       if (expandedEditor === language) {
         article.style.flex = "1 1 0";
-        editors[language].layout();
+        // editors[language].layout();
         expandedEditor = null;
         languages.forEach((lang) => {
           if (lang !== language) {
@@ -57,12 +58,12 @@ export function initializeEditors(languages: Language[], document: Document) {
             )!;
             const otherArticle = otherContainer.closest("article")!;
             otherArticle.style.flex = "1 1 0";
-            editors[language].layout();
+            // editors[language].layout();
           }
         });
       } else {
         article.style.flex = "1 1 0";
-        editors[language].layout();
+        // editors[language].layout();
         expandedEditor = language;
         languages.forEach((lang) => {
           if (lang !== language) {
@@ -71,7 +72,7 @@ export function initializeEditors(languages: Language[], document: Document) {
             )!;
             const otherArticle = otherContainer.closest("article")!;
             otherArticle.style.flex = "0";
-            editors[language].layout();
+            // editors[language].layout();
           }
         });
       }

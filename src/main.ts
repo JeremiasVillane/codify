@@ -3,7 +3,7 @@ import {
   createEditorSection,
   handleContextMenu,
   handleExport,
-  // handleResize,
+  handleResize,
   initializeEditors,
   updatePreview,
 } from "./helpers";
@@ -37,5 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
   handleContextMenu(document, editors);
 
   //**************** Handling resizing ****************//
-  // handleResize(document);
+  handleResize(document);
 });
