@@ -1,5 +1,7 @@
 import { Language } from "../types";
 
+export * from "./actions";
+
 export const LANGUAGES = ["HTML", "CSS", "JavaScript"] as const;
 
 export const INIT_VALUES: Record<Language, string> = {

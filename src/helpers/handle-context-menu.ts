@@ -1,5 +1,5 @@
 import * as monaco from "monaco-editor";
-import { FILE_EXTENSIONS } from "../constants";
+import { ACTIONS } from "../constants";
 import { Language } from "../types";
 
 export function handleContextMenu(
@@ -22,19 +22,11 @@ export function handleContextMenu(
         .closest("article")!
         .querySelector("label")!.dataset.language as Language;
 
-      if (action === "export") {
+      if (action) {
         const editor = editors[language];
         const content = editor.getValue();
-        const blob = new Blob([content], { type: "text/plain" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = `codify-${language.toLowerCase()}.${
-          FILE_EXTENSIONS[language]
-        }`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(link.href);
+
+        ACTIONS[action].fn(content, language);
       }
     });
   });

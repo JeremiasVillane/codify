@@ -1,5 +1,6 @@
 import { ICONS } from "../constants";
 import { Language } from "../types";
+import createMenuActions from "./create-menu-actions";
 
 export function createEditorSection(language: Language) {
   return `
@@ -16,7 +17,7 @@ export function createEditorSection(language: Language) {
       <span class="menu-icon cursor-pointer" title="Options">⋮</span>
       <div class="context-menu hidden absolute right-2 -inset-1 top-8 bg-zinc-900 shadow-md rounded-sm overflow-hidden z-50">
         <ul>
-          <li class="context-menu-item p-2 cursor-pointer hover:bg-zinc-800 font-normal text-sm" data-action="export">Export to file</li>
+          ${createMenuActions()}
         </ul>
       </div>
     </label>
