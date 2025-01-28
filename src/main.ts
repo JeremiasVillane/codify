@@ -7,6 +7,7 @@ import {
   initializeEditors,
   updatePreview,
 } from "./helpers";
+import { createConfigModal } from "./helpers/create-config-modal";
 import "./userWorker";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -38,4 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //**************** Handling resizing ****************//
   handleResize();
+
+  //*************** Create config modal **************//
+  createConfigModal();
 });

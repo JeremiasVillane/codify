@@ -14,8 +14,9 @@ export function createEditorSection(language: Language) {
       <span class="flex items-center gap-1.5">${
         ICONS[language]
       }${language}</span>
+
       <span class="menu-icon cursor-pointer" title="Options">⋮</span>
-      <div class="context-menu hidden absolute right-2 -inset-1 top-8 bg-zinc-900 shadow-md rounded-sm overflow-hidden z-50">
+      <div class="context-menu hidden absolute right-2 top-8 bg-zinc-900 shadow-md rounded-sm overflow-hidden z-50">
         <ul>
           ${createMenuActions()}
         </ul>

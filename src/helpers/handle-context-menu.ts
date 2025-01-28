@@ -24,9 +24,7 @@ export function handleContextMenu(
 
       if (action) {
         const editor = editors[language];
-        const content = editor.getValue();
-
-        ACTIONS[action].fn(content, language);
+        ACTIONS[action].fn(editor, language);
       }
     });
   });

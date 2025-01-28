@@ -28,6 +28,7 @@ export function initializeEditors(languages: Language[]) {
       minimap: { enabled: false },
       wordWrap: "on",
       automaticLayout: true,
+      lineHeight: 1.5,
     });
 
     // Handle editor focus and blur

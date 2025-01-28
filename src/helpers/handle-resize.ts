@@ -1,6 +1,6 @@
 export function handleResize() {
   const resizeHandle = document.getElementById("resizeHandle");
-  const editorColumn = document.getElementById("code-editor");
+  const editorColumn = document.getElementById("codeEditors");
   const previewColumn = document.getElementById("preview");
   let isResizing = false;
   let startX: number, startWidth: number;
